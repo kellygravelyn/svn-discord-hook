@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    excon (0.93.0)
+
+PLATFORMS
+  arm64-darwin-21
+
+DEPENDENCIES
+  excon (~> 0.93.0)
+
+BUNDLED WITH
+   2.3.3

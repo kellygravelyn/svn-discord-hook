@@ -1,0 +1,39 @@
+---
+# hooks should be a simple mapping of repo names to the Discord hook URL that
+# should be invoked. Note that this is just the repo name; not the full path.
+# So if your repo is stored at /var/lib/svn/project1 then the repo_name here
+# would be project1.
+#
+# Hooks are required, naturally, otherwise the script can't post to Discord.
+# If a repository is passed to the script without a hook, the script will
+# print an error but otherwise exit normally.
+hooks:
+	repo1: "https://discord.com/api/webhooks/xx/xx"
+	repo2: "https://discord.com/api/webhooks/xx/xx"
+	repo3: "https://discord.com/api/webhooks/xx/xx"
+
+# users should be a simple mapping of your SVN user names to Discord user IDs.
+# You can find IDs using the Discord developer mode. More details at
+# https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-
+#
+# Users are not required but they allow the script to provide proper user
+# linking in the Discord post which is kind of nice.
+users:
+	jane: 12345
+	john: 67890
+
+# titles are used for the title of the Discord message. You must have at least
+# one. The titles are round-robin iterated based on the revision number. Feel
+# free to add as many as you want or modify the default ones.
+titles:
+	- A wild commit appears!
+	- Someone's doing something
+	- New commit! 🎉
+	- Work work work work work
+	- 🤖 COMMIT RECEIVED BEEP BOOP BEEP 🤖
+	- Look who's getting stuff done!
+	- Little by little…
+
+# Defines the color used for the Discord embed. Specify this as an RGB hex value
+# and the script converts it to the correct Discord format automatically.
+color: "ffc0cb"
