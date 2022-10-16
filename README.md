@@ -20,7 +20,7 @@ Windows supports symlinks up using the `mklink` command. You'd run something
 like this to create your symlink:
 
 ```batch
-mklink "C:\SVN\myproject\hooks\post-commit.bat" "C:\svn-discord-hook\post-commit.bat"
+mklink "C:\svn\myproject\hooks\post-commit.bat" "C:\svn-discord-hook\post-commit.bat"
 ```
 
 Note the first argument is the path to your SVN project's hook file and the
@@ -32,7 +32,7 @@ necessary, of course.
 Here you'd use `ln -s` to create your symlink:
 
 ```batch
-ln -s "/var/lib/svn-discord-hook/post-commit" "/var/lib/SVN/myproject/hooks/post-commit"
+ln -s "/var/lib/svn-discord-hook/post-commit" "/var/lib/svn/myproject/hooks/post-commit"
 ```
 
 Note the first argument is the path to the script in this repository and the
