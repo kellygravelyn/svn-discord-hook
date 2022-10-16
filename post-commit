@@ -1,0 +1,3 @@
+#!/bin/sh
+dir="$(cd "$(dirname "$0")" && pwd )"
+ruby "$dir/post_to_discord.rb" --repo $1 --revision $2
