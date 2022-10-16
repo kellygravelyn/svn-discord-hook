@@ -71,5 +71,7 @@ unless dry_run
 		puts "Unexpected response from Discord:"
 		puts response.status
 		puts response.body
+	else
+		puts "Success! 🎉"
 	end
 end
