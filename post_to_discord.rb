@@ -17,7 +17,7 @@ OptionParser.new do |parser|
   parser.on("--dry-run", "Runs the logic and prints what would be sent to Discord without actually posting") { || dry_run = true }
 end.parse!
 
-config = YAML.load_file("config.yaml")
+config = YAML.load_file(File.join(__dir__, "config.yaml"))
 
 author = %x( svnlook author "#{repo}" -r #{rev} ).strip
 log = %x( svnlook log "#{repo}" -r #{rev} ).strip
